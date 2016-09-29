@@ -75,7 +75,7 @@ function makepage(data){
         `<html>
             <head>
                 <title>
-                   $[data.title]
+                   ${data.title}
                 </title>
                 <meta name = "viewport" content = "width-device-width, initial-scale-1"/>
                 <link href="/ui/style.css" rel="stylesheet" />
@@ -83,21 +83,21 @@ function makepage(data){
             <body>
                 <div class = 'links'>
                     <a href='/'>Home</a>
-                    <a href=$[data.link1]>Previous</a>
-                    <a href=$[data.link2]>Next</a>
+                    <a href=${data.link1}>Previous</a>
+                    <a href=${data.link2}>Next</a>
                 </div>
                 <div>
                     <h3>
-                    $[data.heading]
+                    ${data.heading}
                     </h3>
                 </div>
                 <hr/>
                 <div>
-                    $[data.date]
+                    ${data.date}
                 </div>
                 <hr/>
                 <div class = 'body1'>
-                    $[data.content]
+                    ${data.content}
                 </div>
                 <hr/>
             </body>
