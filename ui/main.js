@@ -10,13 +10,13 @@ text.innerHTML = 'Hi, I am learning client side Javascript.';
 alert(`The text has changed!\nNow to mow madi`);
 
 var image = document.getElementById('madi');
-
+var pix = 0;
 image.onclick = function(){
     setInterval(movemadi,50);
 };
 
 function movemadi(){
-    pix = 0;
+    
     if(pix >500){
         image.style.textAlign = 'left';
         pix = 0;
