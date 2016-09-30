@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-setTimeout(function(){},1000);
+setTimeout(alert("trying to introduce a delay of 1 second"),1000);
 
 // CHANGIN THE MAINT TEXT THE WAS GIVEN THE id 'text1'
 
