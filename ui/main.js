@@ -12,10 +12,10 @@ alert(`The text has changed!\nNow to mow madi`);
 var image = document.getElementById('madi');
 var pix = 0;
 image.onclick = function(){
-    setInterval(movemadi(pix),50);
+    setInterval(movemadi(),50);
 };
 
-function movemadi(pix){
+function movemadi(){
     image.style.textAlign = 'left';
     pix += 1;
     image.style.marginLeft = pix +'px';
