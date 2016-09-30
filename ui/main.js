@@ -21,7 +21,7 @@ image.onclick = function(){
 };*/
 function movemadi(){
     if(pix >500){
-        pix = 0;
+        pix = -500;
     }
     image.style.marginLeft = pix +'px';
     pix += 5;
