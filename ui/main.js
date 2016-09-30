@@ -16,9 +16,9 @@ image.onclick = function(){
     var InRet = setInterval(movemadi,10);
 };
 
-/*image.onclick = function (){
+image.onclick = function (){
     clearInterval(InRet);
-};*/
+};
 function movemadi(){
     if(pix >500){
         pix = -500;
