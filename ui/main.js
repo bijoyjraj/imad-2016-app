@@ -9,3 +9,12 @@ text.innerHTML = 'Hi, I am learning client side Javascript.';
 
 alert(`The text has changed!\nNow to mow madi`);
 
+var image = document.getElementById('madi');
+image.onclick = function(){
+    movemadi();
+};
+
+function movemadi(){
+    image.style.textAlign = 'left';
+    image.style.marginLeft = '10px';
+}
