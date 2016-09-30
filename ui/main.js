@@ -13,4 +13,4 @@ var image = document.getElementById('madi');
 function movemadi(){
     image.style.marginLeft = '300px';
 }
-image.onclick = movemadi();
+image.onclick = 'movemadi()';
