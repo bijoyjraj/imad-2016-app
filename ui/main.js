@@ -16,10 +16,7 @@ image.onclick = function(){
 };
 
 function movemadi(pix){
-    if(pix >500){
-        image.style.textAlign = 'left';
-        pix = 0;
-    }
+    image.style.textAlign = 'left';
     pix += 1;
     image.style.marginLeft = pix +'px';
 }
