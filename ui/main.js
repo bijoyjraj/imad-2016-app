@@ -15,12 +15,12 @@ image.onclick = function(){
     setInterval(movemadi(pix),50);
 };
 
-function movemadi(dist){
-    if(dist >500){
+function movemadi(pix){
+    if(pix >500){
         image.style.textAlign = 'left';
-        dist = 0;
+        pix = 0;
     }
-    dist += 1;
-    image.style.marginLeft = dist +'px';
+    pix += 1;
+    image.style.marginLeft = pix +'px';
 }
     
