@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 alert('Hi, I am trying out inline javascript!! ');
-
+setInterval(100);
 // CHANGIN THE MAINT TEXT THE WAS GIVEN THE id 'text1'
 
 var text = document.getElementById('text1');
