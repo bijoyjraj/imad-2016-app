@@ -16,8 +16,9 @@ image.onclick = function(){
 };
 
 function movemadi(dist){
-    if(dist >2500){
+    if(dist >500){
         image.style.textAlign = 'left';
+        dist = 0;
     }
     image.style.marginLeft = dist +'px';
 }
