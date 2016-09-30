@@ -16,14 +16,14 @@ image.onclick = function(){
     var InRet = setInterval(movemadi,50);
 };
 
-image.onclick = function (){
+/*image.onclick = function (){
     clearInterval(InRet);
-};
+};*/
 function movemadi(){
     if(pix >1000){
         pix = 0;
     }
-    pix += 5;
     image.style.marginLeft = pix +'px';
+    pix += 5;
 }
     
