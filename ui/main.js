@@ -11,6 +11,6 @@ alert(`The text has changed!\nNow to mow madi`);
 
 var image = document.getElementById('madi');
 function movemadi(){
-    image.style.marginleft = '0px';
+    image.style.marginleft = 0;
 }
 image.onclick = movemadi();
