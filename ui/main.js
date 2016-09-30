@@ -16,10 +16,10 @@ image.ondbclick = function(){
     //image.style.textAlign = 'left';
      InRet = setInterval(movemadi,10);
 };
-
+/*
 image.onclick = function (){
     clearInterval(InRet);
-};
+};*/
 function movemadi(){
     if(pix >500){
         pix = -500;
