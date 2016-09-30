@@ -13,14 +13,17 @@ var image = document.getElementById('madi');
 var pix = 0;
 image.onclick = function(){
     image.style.textAlign = 'left';
-    setInterval(movemadi,50);
+    var InRet = setInterval(movemadi,50);
 };
 
+image.onclick = function (){
+    clearInterval(InRet);
+};
 function movemadi(){
-    if(pix >500){
+    if(pix >1000){
         pix = 0;
     }
-    //pix += 1;
-    image.style.marginLeft = (++pix) +'px';
+    pix += 5;
+    image.style.marginLeft = pix +'px';
 }
     
