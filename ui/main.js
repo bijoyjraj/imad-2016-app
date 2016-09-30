@@ -10,9 +10,9 @@ text.innerHTML = 'Hi, I am learning client side Javascript.';
 alert(`The text has changed!\nNow to mow madi`);
 
 var image = document.getElementById('madi');
-var pix = 0;
+var pix = -500;
 image.onclick = function(){
-    image.style.textAlign = 'left';
+    //image.style.textAlign = 'left';
     var InRet = setInterval(movemadi,50);
 };
 
@@ -20,7 +20,7 @@ image.onclick = function(){
     clearInterval(InRet);
 };*/
 function movemadi(){
-    if(pix >1000){
+    if(pix >500){
         pix = 0;
     }
     image.style.marginLeft = pix +'px';
