@@ -7,4 +7,10 @@ clearTimeout(Tout);
 var text = document.getElementById('text1');
 text.innerHTML = 'Hi, I am learning client side Javascript.';
 
-alert('The text has changed!');
+alert(`The text has changed!\nNow to mow madi`);
+
+var image = document.getElementById('madi');
+function movemadi(){
+    image.style.marginleft = '0px';
+}
+image.onclick = movemadi();
