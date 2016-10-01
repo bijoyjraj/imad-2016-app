@@ -36,6 +36,6 @@ Count.onclick = function (){
     response.send();
     var count = response.responseText;
     var span = document.getEelementById('count');
-    span.innerHTML = count;
+    span.innerHTML = count.toString();
 };
     
