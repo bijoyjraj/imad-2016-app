@@ -22,11 +22,11 @@ Count.onclick = function (){
 
 
 //get the nm=ame given as input from the input box
-var namein = document.getElementById('namein');
-var nameinput = namein.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
-    
+    var namein = document.getElementById('namein');
+    var nameinput = namein.value;
     //make a request to the server to create entered name to a list of names and process response
     var reqlist = new XMLHttpRequest();
     reqlist.onreadystatechange = function(){
