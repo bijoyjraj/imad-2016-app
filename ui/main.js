@@ -19,23 +19,30 @@ Count.onclick = function (){
     response.open("GET","http://bijoyjraj.imad.hasura-app.io/counter",true);
     response.send();
 };
-//inputting a name
 
 
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
-    //make a requset to the server
+    
+    //get the nm=ame given as input from the input box
     var namein = document.getElementById('namein');
-    var nameinput = namein.value;
+    var name = namein.value;
+    var listfrmServer = [];
+    //make a request to the server to create entered name to a list of names
+    var reqlist = new XMLHttpRequest();
+    reqlist.onreadystatechange = function(){
+        if(reqlist.readystate === XMLHttpRequest.DONE){
+            if(reqlist.status === 200){
+                listfrmServer = JSON.parse(reqlist.responseText);
+            }
+        }
+    };
+    
     //create the required html content for the list
-    var list = [];
-    for(i = 0; i < 10; i++){
-        list.push(nameinput + (i+1).toString());
+    var namelisthtml = "";
+    for(i = 0; i < listfrmServer.length; i++){
+        namelisthtml += "<li>" + listfrmServer[i] + "</li>";
     }
-    var namelist = "";
-    for(i = 0; i < list.length; i++){
-        namelist += "<li>" + list[i] + "</li>";
-    }
-    var listnew = document.getElementById("names");
-    listnew.innerHTML = namelist;
+    var htmllist = document.getElementById("names");
+    htmllist.innerHTML = namelisthtml;
 };
