@@ -29,7 +29,7 @@ submit.onclick = function (){
     var nameinput = namein.value;
     //create the required html content for the list
     var list = [];
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 10; i++){
         list.push(nameinput + (i+1).toString());
     }
     var namelist = "";
