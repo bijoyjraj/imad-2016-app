@@ -32,13 +32,18 @@ function movemadi(){
 Count = doucument.getElementById('counter');
 Count.onclick = function (){
     var response = new XMLhttpRequest();
+    request.onreadystatechange = function(){
+     if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        // everything is good, the response is received
+        if (httpRequest.status === 200) {
+            // perfect!
+            var count = response.responseText;
+            var countspan = document.getElementById('count');
+            countspan.innerHTML = count.toString();
+        }
+    } 
+    }
     response.open("GET","http://bijoyjraj.imad.hasura-app.io/counter",true);
     response.send();
-    if(response.readystate === XMLhttpRequset.DONE && response.status == 200){
-        response.send(null);
-    }
-    var count = response.responseText;
-    var span = document.getEelementById('count');
-    span.innerHTML = count.toString();
 };
     
