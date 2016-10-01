@@ -19,4 +19,19 @@ Count.onclick = function (){
     response.open("GET","http://bijoyjraj.imad.hasura-app.io/counter",true);
     response.send();
 };
-    
+//inputting a name
+
+var namein = document.getElementById('namein');
+var nameinput = namein.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function (){
+    //make a requset to the server
+    //create the required html content for the list
+    var list = ["name1","name2","name3","name4","name5",];
+    var namelist = "";
+    for(i = 0; i < list.length; i++){
+        namelist += "<li>" + list[i] + "</li>";
+    }
+    var listnew = document.getElementById("names");
+    listnew.innerHTML = namelist;
+};
