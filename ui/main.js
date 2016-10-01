@@ -34,6 +34,9 @@ Count.onclick = function (){
     var response = new XMLhttpRequest();
     response.open("GET","http://bijoyjraj.imad.hasura-app.io/counter",true);
     response.send();
+    if(response.readystate === XMLhttpRequset.DONE && response.status == 200){
+        response.send(null);
+    }
     var count = response.responseText;
     var span = document.getEelementById('count');
     span.innerHTML = count.toString();
