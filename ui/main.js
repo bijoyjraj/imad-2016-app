@@ -26,4 +26,11 @@ function movemadi(){
     image.style.marginLeft = pix +'px';
     pix += 1;
 }
+
+//Implementing a counter
+
+Count = doucument.getElementById('counter');
+Count.onclick = function (){
+    
+};
     
