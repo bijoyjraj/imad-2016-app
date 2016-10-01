@@ -33,16 +33,16 @@ Count = doucument.getElementById('counter');
 Count.onclick = function (){
     var response = new XMLhttpRequest();
     request.onreadystatechange = function(){
-     if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        // everything is good, the response is received
-        if (httpRequest.status === 200) {
-            // perfect!
-            var count = response.responseText;
-            var countspan = document.getElementById('count');
-            countspan.innerHTML = count.toString();
-        }
-    } 
-    }
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            // everything is good, the response is received
+            if (httpRequest.status === 200) {
+                // perfect!
+                var count = response.responseText;
+                var countspan = document.getElementById('count');
+                countspan.innerHTML = count.toString();
+            }
+        } 
+    };
     response.open("GET","http://bijoyjraj.imad.hasura-app.io/counter",true);
     response.send();
 };
