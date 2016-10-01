@@ -32,7 +32,7 @@ function movemadi(){
 Count = doucument.getElementById('counter');
 Count.onclick = function (){
     var response = new XMLhttpRequest();
-    response.open("GET","/counter",true);
+    response.open("GET","http://bijoyjraj.imad.hasura-app.io/counter",true);
     response.send();
     var count = response.responseText;
     var span = document.getEelementById('count');
