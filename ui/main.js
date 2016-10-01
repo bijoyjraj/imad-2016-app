@@ -5,7 +5,7 @@ console.log('Loaded!');
 Count = document.getElementById('counter');
 Count.onclick = function (){
     var response = new XMLHttpRequest();
-    request.onreadystatechange = function(){
+    response.onreadystatechange = function(){
         if (response.readyState === XMLHttpRequest.DONE) {
             // everything is good, the response is received
             if (response.status === 200) {
