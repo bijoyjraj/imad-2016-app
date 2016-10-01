@@ -40,7 +40,7 @@ submit.onclick = function (){
                 }
                 namelisthtml;
                 var htmllist = document.getElementById("names");
-                htmllist.innerHTML = namelisthtml;
+                htmllist.innerHTML = namelisthtml.toString();
             }
         }
     };
