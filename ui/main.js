@@ -29,7 +29,7 @@ function movemadi(){
 
 //Implementing a counter
 
-Count = doucument.getElementById('counter');
+Count = document.getElementById('counter');
 Count.onclick = function (){
     var response = new XMLhttpRequest();
     request.onreadystatechange = function(){
