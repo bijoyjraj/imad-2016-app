@@ -28,16 +28,18 @@ submit.onclick = function (){
     var namein = document.getElementById('namein');
     var name = namein.value;
     var listfrmServer = [];
-    //make a request to the server to create entered name to a list of names
-    var reqlist = new XMLHttpRequest();
-    reqlist.onreadystatechange = function(){
-        if(reqlist.readystate === XMLHttpRequest.DONE){
-            if(reqlist.status === 200){
-                listfrmServer = JSON.parse(reqlist.responseText);
+    //make a request to the server to create entered name to a list of names and process response
+        var reqlist = new XMLHttpRequest();
+        reqlist.onreadystatechange = function(){
+            if(reqlist.readystate === XMLHttpRequest.DONE){
+                if(reqlist.status === 200){
+                    listfrmServer = JSON.parse(reqlist.responseText);
+                }
             }
-        }
-    };
-    
+        };
+        //send requset to server
+        reqlist.open("GET","http://bijoyjraj.imad.hasura-app.io/submitname?name=" + name, true);
+        reqlist.send();
     //create the required html content for the list
     var namelisthtml = "";
     for(i = 0; i < listfrmServer.length; i++){
