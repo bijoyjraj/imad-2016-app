@@ -38,6 +38,7 @@ submit.onclick = function (){
                 for(i = 0; i < listfrmServer.length; i++){
                     namelisthtml += "<li>" + listfrmServer[i] + "</li>";
                 }
+                namelisthtml;
                 var htmllist = document.getElementById("names");
                 htmllist.innerHTML = namelisthtml;
             }
