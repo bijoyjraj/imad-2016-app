@@ -31,7 +31,7 @@ function movemadi(){
 
 Count = document.getElementById('counter');
 Count.onclick = function (){
-    var response = new XMLhttpRequest();
+    var response = new XMLHttpRequest();
     request.onreadystatechange = function(){
         if (response.readyState === XMLHttpRequest.DONE) {
             // everything is good, the response is received
