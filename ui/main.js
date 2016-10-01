@@ -21,13 +21,17 @@ Count.onclick = function (){
 };
 //inputting a name
 
-var namein = document.getElementById('namein');
-var nameinput = namein.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
     //make a requset to the server
+    var namein = document.getElementById('namein');
+    var nameinput = namein.value;
     //create the required html content for the list
-    var list = ["name1","name2","name3","name4","name5",];
+    var list = [];
+    for(i = 0; i < 5; i++){
+        list.push(nameinput + (i+1).toString());
+    }
     var namelist = "";
     for(i = 0; i < list.length; i++){
         namelist += "<li>" + list[i] + "</li>";
