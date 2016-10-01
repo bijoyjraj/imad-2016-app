@@ -31,11 +31,11 @@ submit.onclick = function (){
     reqlist.onreadystatechange = function(){
         if(reqlist.readystate === XMLHttpRequest.DONE){
             if(reqlist.status === 200){
-                var listfrmServer = reqlist.responseText;
-                listfrmServer = JSON.parse(listfrmServer);
+                var listfrmServer = JSON.parse(reqlist.responseText);
+                //listfrmServer = JSON.parse(listfrmServer);
                 //create the required html content for the list
-                var namelisthtml;
-                for(i = 0; i < listfrmServer.length; i++){
+                var namelisthtml = "";
+                for(var i = 0; i < listfrmServer.length; i++){
                     namelisthtml += "<li>" + listfrmServer[i] + "</li>";
                 }
                 namelisthtml;
