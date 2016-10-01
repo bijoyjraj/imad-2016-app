@@ -103,7 +103,12 @@ function makepage(data){
             </body>
         </html>`;
     return page;
-};
+}
+
+var counter = 0;
+app.get('/counter', function(req, res){
+    res.send(counter.toString());
+});
 
 app.get('/:article', function(req, res){
    res.send(makepage(articles[req.params.article])); 
