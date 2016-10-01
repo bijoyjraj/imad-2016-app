@@ -110,6 +110,11 @@ app.get('/counter', function(req, res){
     counter++;
     res.send(counter.toString());
 });
+name_list = [];
+app.get('/submitname', function(req, res){
+    name_list.push(req.query.name);
+    res.send(JSON.stringify(name_list));
+});
 
 app.get('/:article', function(req, res){
    res.send(makepage(articles[req.params.article])); 
