@@ -20,30 +20,31 @@ Count.onclick = function (){
     response.send();
 };
 
- var listfrmServer = [];
+
+//get the nm=ame given as input from the input box
+var namein = document.getElementById('namein');
+var nameinput = namein.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
     
-    //get the nm=ame given as input from the input box
-    var namein = document.getElementById('namein');
-    var name = namein.value;
     //make a request to the server to create entered name to a list of names and process response
-        var reqlist = new XMLHttpRequest();
-        reqlist.onreadystatechange = function(){
-            if(reqlist.readystate === XMLHttpRequest.DONE){
-                if(reqlist.status === 200){
-                    listfrmServer = JSON.parse(reqlist.responseText);
+    var reqlist = new XMLHttpRequest();
+    reqlist.onreadystatechange = function(){
+        if(reqlist.readystate === XMLHttpRequest.DONE){
+            if(reqlist.status === 200){
+                var listfrmServer = reqlist.responseText;
+                listfrmServer = JSON.parse(listfrmServer);
+                //create the required html content for the list
+                var namelisthtml = "";
+                for(i = 0; i < listfrmServer.length; i++){
+                    namelisthtml += "<li>" + listfrmServer[i] + "</li>";
                 }
+                var htmllist = document.getElementById("names");
+                htmllist.innerHTML = namelisthtml;
             }
-        };
-        //send requset to server
-        reqlist.open("GET","http://bijoyjraj.imad.hasura-app.io/submitname?name=" + name, true);
-        reqlist.send();
-    //create the required html content for the list
-    var namelisthtml = "";
-    for(i = 0; i < listfrmServer.length; i++){
-        namelisthtml += "<li>" + listfrmServer[i] + "</li>";
-    }
-    var htmllist = document.getElementById("names");
-    htmllist.innerHTML = namelisthtml;
+        }
+    };
+    //send requset to server
+    reqlist.open("GET","http://bijoyjraj.imad.hasura-app.io/submitname?name=" + nameinput, true);
+    reqlist.send();
 };
